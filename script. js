@@ -1,0 +1,104 @@
+function scrollToPrediction() {
+
+    document.getElementById("prediction")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+
+function predictFlood() {
+
+    let rainfall =
+        Number(document.getElementById("rainfall").value);
+
+    let humidity =
+        Number(document.getElementById("humidity").value);
+
+    let temperature =
+        Number(document.getElementById("temperature").value);
+
+    let river =
+        Number(document.getElementById("river").value);
+
+
+    // AI-style risk calculation
+    let rainfallScore =
+        Math.min(rainfall / 200 * 45, 45);
+
+    let humidityScore =
+        Math.min(humidity / 100 * 20, 20);
+
+    let riverScore =
+        Math.min(river / 10 * 30, 30);
+
+    let temperatureScore =
+        temperature < 30 ? 5 : 2;
+
+
+    let probability =
+        rainfallScore +
+        humidityScore +
+        riverScore +
+        temperatureScore;
+
+
+    probability =
+        Math.round(
+            Math.min(Math.max(probability, 1), 99)
+        );
+
+
+    let risk;
+    let message;
+
+
+    if (probability < 30) {
+
+        risk = "LOW";
+        message =
+            "🟢 Current flood risk is low. Continue monitoring.";
+
+    }
+
+    else if (probability < 60) {
+
+        risk = "MODERATE";
+        message =
+            "🟡 Moderate risk detected. Monitor rainfall and river level.";
+
+    }
+
+    else if (probability < 80) {
+
+        risk = "HIGH";
+        message =
+            "🟠 High flood risk! Prepare emergency response measures.";
+
+    }
+
+    else {
+
+        risk = "EXTREME";
+        message =
+            "🔴 Extreme flood risk! Immediate warning recommended.";
+
+    }
+
+
+    document.getElementById("score")
+        .innerText = probability + "%";
+
+    document.getElementById("risk")
+        .innerText = risk;
+
+    document.getElementById("message")
+        .innerText = message;
+
+
+    // Scroll to result
+    document.getElementById("result")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
