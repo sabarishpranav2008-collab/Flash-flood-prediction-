@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #06111f;
+    color: white;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #081827;
+    border-bottom: 1px solid #18334d;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00d9ff;
+}
+
+.india {
+    font-size: 18px;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+
+    background:
+        radial-gradient(circle at center,
+        #12466b,
+        #06111f 70%);
+}
+
+.tag {
+    display: inline-block;
+    padding: 9px 18px;
+    border: 1px solid #00d9ff;
+    border-radius: 30px;
+    color: #00d9ff;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: #00d9ff;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 25px auto;
+    color: #a8bbcc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero button {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: #00b8e6;
+    color: white;
+    font-size: 16px;
+}
+
+.dashboard {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+}
+
+.section-title p {
+    color: #00d9ff;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    margin-top: 8px;
+    font-size: 32px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #0c1d2e;
+    border: 1px solid #1b3852;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.card label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.card input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #34536c;
+    background: #06111f;
+    color: white;
+    font-size: 17px;
+}
+
+.card small {
+    display: block;
+    margin-top: 8px;
+    color: #8297aa;
+}
+
+.predict {
+    width: 100%;
+    margin-top: 25px;
+    padding: 17px;
+    border-radius: 10px;
+    background: #00a8d4;
+    color: white;
+    font-size: 17px;
+}
+
+.predict:hover,
+.hero button:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+.result {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.result-box {
+    padding: 40px;
+    border-radius: 20px;
+    background: #0c1d2e;
+    border: 1px solid #1b3852;
+}
+
+.result-box > p:first-child {
+    color: #00d9ff;
+    letter-spacing: 2px;
+}
+
+.circle {
+    width: 190px;
+    height: 190px;
+    margin: 25px auto;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 10px solid #00b8e6;
+    background: #071522;
+}
+
+.circle span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#risk {
+    font-size: 32px;
+}
+
+#message {
+    margin-top: 12px;
+    color: #9fb3c5;
+}
+
+.features {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.features div {
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    background: #0c1d2e;
+    border: 1px solid #1b3852;
+}
+
+.features span {
+    font-size: 35px;
+}
+
+.features h3 {
+    margin: 15px 0 8px;
+}
+
+.features p {
+    color: #8297aa;
+    line-height: 1.5;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 35px;
+    text-align: center;
+    background: #030a12;
+}
+
+footer p {
+    color: #718699;
+    margin-top: 8px;
+}
+
+@media(max-width: 800px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .cards,
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .cards,
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
