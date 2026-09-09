@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashGuard AI | Flood Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🌊 FlashGuard <span>AI</span></div>
+    <div class="india">🇮🇳 INDIA</div>
+</nav>
+
+<section class="hero">
+    <div>
+        <div class="tag">AI POWERED • EARLY WARNING SYSTEM</div>
+
+        <h1>
+            Flash Flood<br>
+            <span>Prediction System</span>
+        </h1>
+
+        <p>
+            Smart flood-risk monitoring using rainfall,
+            river level and environmental data.
+        </p>
+
+        <button onclick="scrollToPrediction()">
+            Start Prediction →
+        </button>
+    </div>
+</section>
+
+<section class="dashboard" id="prediction">
+
+    <div class="section-title">
+        <p>LIVE ANALYSIS</p>
+        <h2>Environmental Parameters</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <label>🌧️ Rainfall</label>
+            <input id="rainfall" type="number" value="80">
+            <small>mm / 24 hours</small>
+        </div>
+
+        <div class="card">
+            <label>💧 Humidity</label>
+            <input id="humidity" type="number" value="75">
+            <small>Percentage %</small>
+        </div>
+
+        <div class="card">
+            <label>🌡️ Temperature</label>
+            <input id="temperature" type="number" value="27">
+            <small>Degree Celsius</small>
+        </div>
+
+        <div class="card">
+            <label>🌊 River Level</label>
+            <input id="river" type="number" value="5">
+            <small>Metres</small>
+        </div>
+
+    </div>
+
+    <button class="predict" onclick="predictFlood()">
+        🚨 ANALYZE FLOOD RISK
+    </button>
+
+</section>
+
+
+<section class="result" id="result">
+
+    <div class="result-box">
+
+        <p>AI PREDICTION</p>
+
+        <div class="circle">
+            <span id="score">0%</span>
+        </div>
+
+        <h2 id="risk">READY</h2>
+
+        <p id="message">
+            Enter environmental data and start analysis.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div>
+        <span>🧠</span>
+        <h3>AI Risk Analysis</h3>
+        <p>Intelligent flood probability calculation.</p>
+    </div>
+
+    <div>
+        <span>🌧️</span>
+        <h3>Rainfall Monitoring</h3>
+        <p>Analyze heavy rainfall conditions.</p>
+    </div>
+
+    <div>
+        <span>🌊</span>
+        <h3>River Monitoring</h3>
+        <p>Monitor river-level danger conditions.</p>
+    </div>
+
+    <div>
+        <span>🚨</span>
+        <h3>Early Warning</h3>
+        <p>Generate instant risk-level alerts.</p>
+    </div>
+
+</section>
+
+
+<footer>
+    <h3>🌊 FlashGuard AI 🇮🇳</h3>
+    <p>AI-Based Flash Flood Early Warning System</p>
+    <p>Hackathon Prototype • 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
